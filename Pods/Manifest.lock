@@ -1,0 +1,42 @@
+PODS:
+  - Alamofire (5.0.2)
+  - BPBlockActivityIndicator (1.1)
+  - Kingfisher (5.13.1):
+    - Kingfisher/Core (= 5.13.1)
+  - Kingfisher/Core (5.13.1)
+  - MockURLSession (2.0.0)
+  - PromiseKit (6.13.1):
+    - PromiseKit/CorePromise (= 6.13.1)
+    - PromiseKit/Foundation (= 6.13.1)
+    - PromiseKit/UIKit (= 6.13.1)
+  - PromiseKit/CorePromise (6.13.1)
+  - PromiseKit/Foundation (6.13.1):
+    - PromiseKit/CorePromise
+  - PromiseKit/UIKit (6.13.1):
+    - PromiseKit/CorePromise
+
+DEPENDENCIES:
+  - Alamofire (~> 5.0)
+  - BPBlockActivityIndicator
+  - Kingfisher (~> 5.13)
+  - MockURLSession
+  - PromiseKit (~> 6.8)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - BPBlockActivityIndicator
+    - Kingfisher
+    - MockURLSession
+    - PromiseKit
+
+SPEC CHECKSUMS:
+  Alamofire: 3ba7a4db18b4f62c4a1c0e1cb39d7f3d52e10ada
+  BPBlockActivityIndicator: f1ac1f24df373ffe9d1dae7308b7cea9a1c7f152
+  Kingfisher: f33a848445e33c543620812158dc5d47f6bf90df
+  MockURLSession: 41687ddcb52d4ce5e1ecc0e910f15060c5a7c527
+  PromiseKit: 28fda91c973cc377875d8c0ea4f973013c05b6db
+
+PODFILE CHECKSUM: ecdd8f3b6f4853cd4766d1603d67001d06d09281
+
+COCOAPODS: 1.5.3

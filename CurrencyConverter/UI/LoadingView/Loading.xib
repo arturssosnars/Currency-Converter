@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="jSp-R4-ud0" customClass="LoadingView" customModule="CurrencyConverter" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LandingImage" translatesAutoresizingMaskIntoConstraints="NO" id="08d-7h-WPF">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                </imageView>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="WAb-YT-4vt">
+                    <rect key="frame" x="12" y="222.66666666666666" width="390" height="450.66666666666674"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="exchangeIcon" translatesAutoresizingMaskIntoConstraints="NO" id="pgP-yi-XSu">
+                            <rect key="frame" x="0.0" y="0.0" width="390" height="390"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="pgP-yi-XSu" secondAttribute="height" multiplier="1:1" id="mID-Ue-8ga"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Currency exchange rates " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8x3-L0-Et8">
+                            <rect key="frame" x="0.0" y="410" width="390" height="40.666666666666686"/>
+                            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.39708956862957751" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="34"/>
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="pgP-yi-XSu" secondAttribute="trailing" id="0cu-SP-Hve"/>
+                        <constraint firstItem="pgP-yi-XSu" firstAttribute="leading" secondItem="WAb-YT-4vt" secondAttribute="leading" id="2md-Ij-hLr"/>
+                        <constraint firstItem="pgP-yi-XSu" firstAttribute="top" secondItem="WAb-YT-4vt" secondAttribute="top" id="Kfc-js-uWL"/>
+                        <constraint firstItem="8x3-L0-Et8" firstAttribute="leading" secondItem="WAb-YT-4vt" secondAttribute="leading" id="N4b-rp-Vd8"/>
+                        <constraint firstAttribute="bottom" secondItem="8x3-L0-Et8" secondAttribute="bottom" id="fzD-X7-vPO"/>
+                        <constraint firstAttribute="trailing" secondItem="8x3-L0-Et8" secondAttribute="trailing" id="mj7-Qv-8yQ"/>
+                    </constraints>
+                </stackView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RUR-7Z-U3Z" customClass="BPBlockActivityIndicator" customModule="BPBlockActivityIndicator">
+                    <rect key="frame" x="177" y="685.33333333333337" width="60" height="60"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="Fy5-bE-fEU"/>
+                        <constraint firstAttribute="width" constant="60" id="l5u-hM-gcn"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="animationSpeed">
+                            <real key="value" value="0.25"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="color">
+                            <color key="value" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstItem="WAb-YT-4vt" firstAttribute="centerY" secondItem="jSp-R4-ud0" secondAttribute="centerY" id="3Q6-R1-oaT"/>
+                <constraint firstAttribute="bottom" secondItem="08d-7h-WPF" secondAttribute="bottom" id="4BP-O8-vUe"/>
+                <constraint firstItem="WAb-YT-4vt" firstAttribute="leading" secondItem="jSp-R4-ud0" secondAttribute="leading" constant="12" id="JdF-PE-NGr"/>
+                <constraint firstAttribute="trailing" secondItem="08d-7h-WPF" secondAttribute="trailing" id="PQh-jS-bfJ"/>
+                <constraint firstItem="08d-7h-WPF" firstAttribute="top" secondItem="jSp-R4-ud0" secondAttribute="top" id="UO0-8T-dRq"/>
+                <constraint firstItem="08d-7h-WPF" firstAttribute="leading" secondItem="jSp-R4-ud0" secondAttribute="leading" id="pYd-Hb-PW4"/>
+                <constraint firstItem="RUR-7Z-U3Z" firstAttribute="top" secondItem="WAb-YT-4vt" secondAttribute="bottom" constant="12" id="ph8-vO-N84"/>
+                <constraint firstItem="0Ru-w8-ysh" firstAttribute="trailing" secondItem="WAb-YT-4vt" secondAttribute="trailing" constant="12" id="vKz-Uh-L9J"/>
+                <constraint firstItem="RUR-7Z-U3Z" firstAttribute="centerX" secondItem="jSp-R4-ud0" secondAttribute="centerX" id="xVk-Xv-ZjI"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="0Ru-w8-ysh"/>
+            <connections>
+                <outlet property="indicator" destination="RUR-7Z-U3Z" id="rpU-HO-2WX"/>
+            </connections>
+            <point key="canvasLocation" x="-590" y="152"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="LandingImage" width="1920" height="3411"/>
+        <image name="exchangeIcon" width="512" height="512"/>
+    </resources>
+</document>
