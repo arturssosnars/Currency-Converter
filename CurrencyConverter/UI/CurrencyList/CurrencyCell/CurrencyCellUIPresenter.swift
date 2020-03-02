@@ -69,7 +69,6 @@ class CurrencyCellUIPresenter: NSObject {
     public func updateRateValue(_ value: Double) {
         self.exchangeRate = value
     }
-    
 }
 
 extension CurrencyCellUIPresenter: UITextFieldDelegate {
