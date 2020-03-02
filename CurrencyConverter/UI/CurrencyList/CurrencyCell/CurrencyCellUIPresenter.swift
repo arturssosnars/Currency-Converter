@@ -73,11 +73,25 @@ class CurrencyCellUIPresenter: NSObject {
 
 extension CurrencyCellUIPresenter: UITextFieldDelegate {
     internal func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        let res = (textField.text ?? "") + string
+        let text = textField.text ?? ""
+        let res: String = {
+            if string.isEmpty {
+                return String(text.dropLast())
+            } else {
+                return text + string
+            }
+        }()
         let isValid = Double(res) != nil
-        
 
-        if isValid || textField.text == "" {
+        let textArray = res.components(separatedBy: ".")
+        if textArray.count == 2 {
+            let lastString = textArray.last
+            if lastString!.count > 2 { //Check number of decimal places
+                return false
+            }
+        }
+
+        if isValid || res == "" {
             cell?.onCurrencyAmountChange?(Double(res) ?? 0)
         }
         guard !string.isEmpty else {
